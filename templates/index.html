@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+	<title>{% block title %}Encryption Ciphers{% endblock %}</title>
+  </head>
+  <body>
+    <div id="content">
+    	{% block content %}
+    	<div>
+        <h1>Ciphers</h1>
+        <ul>
+          <li><a href="CaesarCipher">Caser Cipher</a></li>
+          <li><a href="columnarCipher">Columnar Cipher</a></li>
+          <li><a href="oneTimePadCipher">Vernam One Time Pad Cipher</a></li>
+        </ul>
+      </div>
+    	{% endblock %}
+    </div>
+  </body>
+</html>

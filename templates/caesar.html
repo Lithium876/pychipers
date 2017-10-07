@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block title %}Caesar{% endblock %}
+
+{% block content %}
+  <div align="center">
+    <h1>Caesar Cipher</h1>
+    <h3>Encrypt</h3>
+    <form method="post" action="/caesarEncrypted">
+      <label for="Encrypt">Encrypt:</label>
+      <input id="Encrypt" name="plain" id="plain" value="{{Decrpyt}}">
+      <label for="key">Key:</label>
+      <input id="key" name="key" id="key"><br><br>
+      <input type="submit" name="">
+     <br>
+      <h3>Encrypted: {{Encrpyt}}</h3>  
+    </form>
+  </div>
+  <br><hr><br>
+  <div align="center">
+    <h3>Decrypt</h3>
+    <form method="post" action="/caesarDecrypted">
+      <label for="Encrypt">Decrypt:</label>
+      <input id="Decrypt" name="encrypt" id="encrypt" value="{{Encrpyt}}">
+      <label for="key">Key:</label>
+      <input id="key" name="key" id="key"><br><br>
+      <input type="submit" name="">
+      <br>
+      <h3>Plain Text: {{Decrpyt}}</h3>  
+    </form>
+  </div>
+  <div align="center">
+    <form method="get" action="/">
+    <br><br>
+      <button>Go Back</button>
+    </form>
+  </div>
+
+{% endblock %}

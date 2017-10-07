@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block title %}Vernam | One Time Pad{% endblock %}
+
+{% block content %}
+  <div align="center">
+    <h1>Vernam One Time Pad Cipher</h1>
+    <h3>Encrypt</h3>
+    <form method="post" action="/vernamEncrypted">
+      <label for="Encrypt">Encrypt:</label>
+      <input id="Encrypt" name="plain" id="plain" value="{{Decrpyt}}">
+      <label for="key">Key:</label>
+      <input id="key" name="key" id="key"><br><br>
+      <input type="submit">
+     <br>
+      <h3>Encrypted: {{Encrpyt}}</h3>  
+    </form>
+  </div>
+  <br><hr><br>
+  <div align="center">
+    <h3>Decrypt</h3>
+    <form method="post" action="/vernamDecrypted">
+      <label for="Decrypt">Decrypt:</label>
+      <input id="Decrypt" name="encrypt" id="encrypt" value="{{Encrpyt}}">
+      <label for="key">Key:</label>
+      <input id="key" name="key" id="key"><br><br>
+      <input type="submit" name="">
+      <br>
+      <h3>Plain Text: {{Decrpyt}}</h3>  
+    </form>
+  </div>
+  <div align="center" style="color:red">
+    <h1>{{error}}</h1>
+  </div>
+  <div align="center">
+    <form method="get" action="/">
+    <br><br><br>
+      <button>Go Back</button>
+    </form>
+  </div>
+{% endblock %}
